@@ -15,7 +15,6 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 import swal from 'sweetalert';
-import Swal from 'sweetalert2/src/sweetalert2.js'
 
 function validate(newPass){
   let errors = {} //creo un objeto vacio
