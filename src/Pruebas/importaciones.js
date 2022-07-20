@@ -18,7 +18,6 @@ import {AddCircleOutline, RemoveCircleOutline,RemoveShoppingCartOutlined, GroupO
 
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 
-import Swal from 'sweetalert2/src/sweetalert2.js'
 import swal from 'sweetalert';
 
  

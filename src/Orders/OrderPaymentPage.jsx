@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { GETORDER, PAYORDER,GETPRODUCTS } from '../actions';
 import NavBar from '../Components/NavBar'
-import Swal from 'sweetalert2/src/sweetalert2.js'
 import swal from 'sweetalert';
 import Cookie from 'js-cookie'
 import { display } from '@mui/system';
