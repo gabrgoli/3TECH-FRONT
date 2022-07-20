@@ -74,7 +74,7 @@ export default function PasswordChange() {
             button:"Aceptars"
           })
 
-          Swal.fire({
+          /*Swal.fire({
             title: 'Custom width, padding, color, background.',
             width: 600,
             padding: '3em',
@@ -87,7 +87,7 @@ export default function PasswordChange() {
               no-repeat
             `
           })
-
+*/
 
           //navegar("/")//se accede al home
          // window.location.reload();//se refresca para activar el dispatch de GETPRODUCTS()       
