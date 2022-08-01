@@ -31,7 +31,7 @@ const ProductDetails=({wishlist,setWishList})=>{
 
     const {isAuthenticated}=useAuth0()
     const product=useSelector((state)=>state.rootReducer.detail)
-   const [colorHeart, setColorHeart] = useState ();
+    const [colorHeart, setColorHeart] = useState ();
 
     const actualUser = Cookie.get('user') && JSON.parse(Cookie.get('user'))
     const dispatch=useDispatch()

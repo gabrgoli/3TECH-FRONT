@@ -185,7 +185,7 @@ export const GETPRODUCTREVIEWS = createAsyncThunk('GETPRODUCTREVIEWS', async (id
     return response.data
 })
 
-
+// Muestra la Wishlist
 export const GETWISHLIST = createAsyncThunk('GETWISHLIST', async (productId) => { 
     const token=Cookie.get('token')
     const response=await axios(`${api}/users/wishlist/12345` ,{

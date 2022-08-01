@@ -218,9 +218,9 @@ export default function PrimarySearchAppBar({wishlist,setWishList}) {
       
               
                 <Box sx={{display:'flex',alignItems:'center', justifyContent:'flex-end'}}>
-
+                    {/* WISHLIST */}
                     {isAuthenticated&&<WishList wishlist={wishlist} setWishList={setWishList}/>}
-                    
+                    {/* CART SHOP */}
                     <NavLink to='/cart' style={isActive => ({color: isActive ? "white" : "white"})}>
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                             <Badge badgeContent={numberOfItems} color="error">
@@ -229,8 +229,10 @@ export default function PrimarySearchAppBar({wishlist,setWishList}) {
                         </IconButton>
                     </NavLink>
 
+                    {/* BOTON DE LOGIN O DE CUENTA */}
                   <Box sx={{ display: { md: 'flex' } }}>
                     {isAuthenticated?
+                    //SI ESTA LOGEADO , BOTON DE CUENTA DE USUARIO
                     <IconButton
                       size="large"
                       edge="end"
@@ -243,6 +245,7 @@ export default function PrimarySearchAppBar({wishlist,setWishList}) {
                       <Avatar alt={user?.name} src={user?.avatar||user?.picture} />
                     </IconButton>
                     :
+                    // SINO ESTA LOGEADO, BOTON PARA LOGIN
                     <Button sx={{bgcolor:color.color2,color:'black',ml:2}}
                     onClick={()=>loginWithPopup().then(()=>getIdTokenClaims()).then(r=>axios.post(`${api}/users/login`,{token:r?.__raw})).then(r=>{
                       Cookie.set('token',r?.data.token)
@@ -274,7 +277,7 @@ export default function PrimarySearchAppBar({wishlist,setWishList}) {
                       if(user.suspendedAccount===true){
                         return swal({title:"Usuario Bloqueado",text:"Por favor contactarse con admin@mail.com",icon:"error",button:"Aceptar"})
                         .then(()=>{
-                          Cookie.set('user',JSON.stringify([]))//pone en blanco al usuario n cookies
+                          Cookie.set('user',JSON.stringify([]))//pone en blanco al usuario en cookies
                           Cookie.remove('cart')
                           Cookie.remove('token')
                           logout({returnTo:window.location.origin})})
