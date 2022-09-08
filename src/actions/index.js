@@ -1,8 +1,8 @@
 import axios from "axios"
 import { createAction, createAsyncThunk } from "@reduxjs/toolkit"
 import Cookie from 'js-cookie'
-
-export const api=process.env.REACT_APP_URL_BACKEND||'https://app3tech-backend.herokuapp.com'
+//export const api='http://localhost:3000'
+ export const api=process.env.REACT_APP_URL_BACKEND||'https://app3tech-backend.herokuapp.com'
 //export const api='https://app3tech-backend.herokuapp.com'
 
                         /////////////////////////////////////   
@@ -12,6 +12,7 @@ export const api=process.env.REACT_APP_URL_BACKEND||'https://app3tech-backend.he
 //trae todos los productos
 export const GETPRODUCTS = createAsyncThunk('GETPRODUCTS', async () => { 
     const response = await axios(`${api}/products`)
+    console.log("productos",response)
     return response.data
 })
 //devuelve las categorias de productos de la tabla category

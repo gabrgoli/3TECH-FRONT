@@ -223,7 +223,7 @@ export default function PrimarySearchAppBarSmall({wishlist,setWishList}) {
                     
 
                     <NavLink to='/cart' style={isActive => ({color: isActive ? "white" : "white"})}>
-                        <IconButton fontsize="medium" aria-label="show 4 new mails" color="inherit">
+                        <IconButton fontSize="medium" aria-label="show 4 new mails" color="inherit">
                             <Badge badgeContent={numberOfItems} color="error">
                                 <ShoppingCart/>
                             </Badge>
